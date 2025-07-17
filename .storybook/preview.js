@@ -1,21 +1,15 @@
-/** @type { import('@storybook/react-webpack5').Preview } */
 import { ChakraProvider, defaultSystem } from "@chakra-ui/react"
-const preview = {
-  parameters: {
-    controls: {
-      matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
-      },
-    },
-  },
+import type { Preview } from "@storybook/react"
+
+const preview: Preview = {
+  // ...
   decorators: [
     (Story) => (
       <ChakraProvider value={defaultSystem}>
-        <Story/>
+        <Story />
       </ChakraProvider>
     ),
   ],
-};
+}
 
-export default preview;
+export default preview
