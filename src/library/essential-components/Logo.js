@@ -15,11 +15,15 @@ function Logo() {
         borderRadius="sm"
       >
         <svg
+          role="img"
+          aria-label="YouTube play logo"
           width="16"
           height="16"
           fill="white"
           viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
+          <title>YouTube play logo</title>
           <path d="M10 16.5l6-4.5-6-4.5v9z" />
         </svg>
       </Box>
