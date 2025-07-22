@@ -31,12 +31,8 @@ const meta = {
     size: 'md',
     variant: 'solid',
     colorPalette: 'blue',
-
   },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
 };
-
 
 export default meta;
 
@@ -53,6 +49,5 @@ export const Primary = {
     await userEvent.click(button);
 
     expect(button).toBeInTheDocument();
-
   },
 };
