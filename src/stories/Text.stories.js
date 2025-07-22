@@ -1,5 +1,6 @@
-// src/stories/Text.stories.js
 import React from 'react';
+import { within } from '@storybook/testing-library';
+import { expect } from '@storybook/jest';
 import Text from '../library/essential-components/Text';
 
 export default {
@@ -22,7 +23,7 @@ export default {
 const Template = (args) => <Text {...args} />;
 
 /* ──────────────────────────────────
- * Single‑prop playground
+ * Single‑prop playground + Interaction Test
  * ────────────────────────────────── */
 export const Playground = Template.bind({});
 Playground.args = {
@@ -30,6 +31,19 @@ Playground.args = {
   size: 'md',
   weight: 'normal',
   color: 'black',
+};
+
+// ✅ Interaction Test using play function
+Playground.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+
+  // Assert that the text is visible
+  const textElement = await canvas.getByText('Hello, Chakra Text!');
+  expect(textElement).toBeVisible();
+
+  // Optional: check styles
+  expect(textElement).toHaveStyle('font-size: 16px');
+ // Chakra sets this via class, but you can still test for rough styles
 };
 
 /* ──────────────────────────────────
