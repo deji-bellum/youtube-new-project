@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChakraProvider, Box, Stack } from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
 import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 import FilterTag from '../library/essential-components/FilterTag';
