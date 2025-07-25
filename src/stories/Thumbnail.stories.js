@@ -1,7 +1,7 @@
 // src/stories/Thumbnail.stories.js
 
 import React from 'react';
-import { within, userEvent, waitFor } from '@storybook/testing-library';
+import { within, waitFor } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 import Thumbnail from '../library/essential-components/Thumbnail';
 
